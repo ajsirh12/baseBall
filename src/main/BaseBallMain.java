@@ -20,12 +20,10 @@ public class BaseBallMain {
 		boolean strike = true;
 		
 		while(flag) {
-			System.out.println("flag");
 			baseBall = new ThreeNums();
 			baseBallNums = baseBall.getBaseBallNums();
 			
 			while(strike) {
-				System.out.println("strike");
 				strike = inputNums.chkScore(baseBallNums, inputNums.inputNums());
 			}
 			if(restart()) {
@@ -42,7 +40,7 @@ public class BaseBallMain {
 	private static boolean restart() {
 		int check;
 		
-		System.out.println("Àç½ÃÀÛ : 1     Á¾·á : 2");
+		System.out.println("ìž¬ì‹œìž‘ : 1      ì¢…ë£Œ : 2");
 		
 		Scanner sc = new Scanner(System.in);
 		check = sc.nextInt();

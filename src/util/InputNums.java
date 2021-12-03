@@ -27,13 +27,13 @@ public class InputNums {
 		}
 		
 		if(strike == 0 && ball == 0) {
-			System.out.println("³´½Ì");
+			System.out.println("ë‚«ì‹±");
 		}
 		else if(strike == 3) {
 			flag = false;
 		}
 		else {
-			System.out.println(strike + " ½ºÆ®¶óÀÌÆ® / " + ball + " º¼");
+			System.out.println(strike + "ìŠ¤íŠ¸ë¼ì´í¬" + ball + "ë³¼");
 		}
 		
 		return flag;
@@ -43,7 +43,7 @@ public class InputNums {
 		String result;
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("3ÀÚ¸® ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("3ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
 		result = sc.next();
 		
 		if(result.length() != 3) {
