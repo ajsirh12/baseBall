@@ -43,7 +43,7 @@ public class InputNums {
 		String result;
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("3�ڸ� ���ڸ� �Է��ϼ���.");
+		System.out.println("3자리 숫자를 입력하세요.");
 		result = sc.next();
 		
 		if(result.length() != 3) {
