@@ -16,7 +16,7 @@ public class InputNums {
 		for(int i=0;i<nums.length();i++) {
 			Integer loc = param.get(String.valueOf(nums.charAt(i)));
 			if(loc == null) {
-//				System.out.println("nothing");
+				
 			}
 			else if(loc == i) {
 				strike++;
@@ -39,24 +39,28 @@ public class InputNums {
 		return flag;
 	}
 
-	public String inputNums() throws IllegalArgumentException {
+	public String inputNums() {
 		String result;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("3자리 숫자를 입력하세요.");
 		result = sc.next();
 		
-		if(result.length() != 3) {
-			throw new IllegalArgumentException();
-		}
-		if(!chkOverlapNum(result)) {
-			throw new IllegalArgumentException();
-		}
-		if(!chkWords(result)) {
-			throw new IllegalArgumentException();
-		}
+		chkException(result);
 		
 		return result;
+	}
+	
+	private void chkException(String str) {
+		if(str.length() != 3) {
+			throw new IllegalArgumentException();
+		}
+		if(!chkOverlapNum(str)) {
+			throw new IllegalArgumentException();
+		}
+		if(!chkWords(str)) {
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	private boolean chkOverlapNum(String nums) {
@@ -86,11 +90,4 @@ public class InputNums {
 		}
 		return flag;
 	}
-	
-	private boolean restart() {
-		boolean flag = false;
-		
-		return flag;
-	}
-
 }
