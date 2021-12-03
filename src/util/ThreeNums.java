@@ -23,7 +23,7 @@ public class ThreeNums {
 	}
 	
 	private String randomNum() {
-		int result = (int) ((Math.random()*235)%10);
+		int result = (int) ((Math.random()*235)%9) + 1;
 		
 		return Integer.toString(result);
 	}
